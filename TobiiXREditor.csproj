@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4BA2E5C9-D3FA-C8E0-2FE7-59D86452EBF1}</ProjectGuid>
+    <ProjectGuid>{3AEFE3ED-CA1C-B4B0-6D63-0DB3CC82D4A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>TobiiXREditor</AssemblyName>
@@ -263,10 +263,10 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -623,33 +623,33 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="TobiiXRCore.csproj">
-      <Project>{69A9A8AA-78CC-2A97-C82C-9BB30E5FA0DE}</Project>
+      <Project>{6038FEFE-A958-3477-5913-4410EBEC17C9}</Project>
       <Name>TobiiXRCore</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRInternalEditor.csproj">
-      <Project>{EA45268A-DD1C-4BB7-7E34-56CEF7C4D718}</Project>
+      <Project>{AC3DB59F-DB6A-180B-3DBE-E9CAD9EE80A1}</Project>
       <Name>TobiiXRInternalEditor</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRDevTools.csproj">
-      <Project>{C3DF624E-C918-BA90-7577-D4C78CD55F55}</Project>
+      <Project>{F42233A5-C7DF-9CB0-B3FC-0CBB95931519}</Project>
       <Name>TobiiXRDevTools</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRSDK.csproj">
-      <Project>{FA039035-543E-2F45-8E6A-5DCEFF6FBC8F}</Project>
+      <Project>{B8B7D499-8FF0-4C70-E1B5-3A914BF14183}</Project>
       <Name>TobiiXRSDK</Name>
     </ProjectReference>
   </ItemGroup>

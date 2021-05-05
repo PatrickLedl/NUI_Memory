@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E13A8AE3-37D8-370F-CDCA-FBF085403B3F}</ProjectGuid>
+    <ProjectGuid>{546E18E4-AECE-B3FB-F632-6BECF8A887CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\LoadManager.cs" />
+    <Compile Include="Assets\Scripts\Pointer.cs" />
+    <Compile Include="Assets\Scripts\Rock1.cs" />
+    <Compile Include="Assets\Scripts\RockController.cs" />
     <Compile Include="Assets\TobiiXR\Examples\DataTransparency_Example\DataTransparencyPopup.cs" />
     <Compile Include="Assets\TobiiXR\Examples\DataTransparency_Example\PulsateColor.cs" />
     <Compile Include="Assets\TobiiXR\Examples\HandEyeCoordination_Example\Plugins\Tobii.HEC.Interop.cs" />
@@ -332,7 +338,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -680,77 +686,81 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Dev/Patrick/UXD-M NUI.3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Repositories/NUI_Memory/NUI_Memory/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{EDEE69C7-E6FB-E87C-A841-2D777FFE5164}</Project>
-      <Name>SteamVR_Input_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{A3EB34E1-6A7E-D4E3-955D-1B372DBCA9EB}</Project>
-      <Name>SteamVR_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{1BB47AF7-53DC-5B24-BE81-2F0FCAD6BA89}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{AA5751B9-C9EC-A40B-2366-C21DE4157826}</Project>
-      <Name>SteamVR_Windows_EditorHelper</Name>
-    </ProjectReference>
     <ProjectReference Include="TobiiXREditor.csproj">
-      <Project>{4BA2E5C9-D3FA-C8E0-2FE7-59D86452EBF1}</Project>
+      <Project>{3AEFE3ED-CA1C-B4B0-6D63-0DB3CC82D4A8}</Project>
       <Name>TobiiXREditor</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRSDK.csproj">
-      <Project>{FA039035-543E-2F45-8E6A-5DCEFF6FBC8F}</Project>
+      <Project>{B8B7D499-8FF0-4C70-E1B5-3A914BF14183}</Project>
       <Name>TobiiXRSDK</Name>
     </ProjectReference>
     <ProjectReference Include="GazeModifierEditor.csproj">
-      <Project>{182DB597-11B5-39AD-1E9E-6C13E34D3D8B}</Project>
+      <Project>{10AD4137-5CBF-B88C-BCC8-43AD42935E80}</Project>
       <Name>GazeModifierEditor</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRCore.csproj">
-      <Project>{69A9A8AA-78CC-2A97-C82C-9BB30E5FA0DE}</Project>
+      <Project>{6038FEFE-A958-3477-5913-4410EBEC17C9}</Project>
       <Name>TobiiXRCore</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRInternalEditor.csproj">
-      <Project>{EA45268A-DD1C-4BB7-7E34-56CEF7C4D718}</Project>
+      <Project>{AC3DB59F-DB6A-180B-3DBE-E9CAD9EE80A1}</Project>
       <Name>TobiiXRInternalEditor</Name>
     </ProjectReference>
     <ProjectReference Include="TobiiXRG2OM.csproj">
-      <Project>{A72C00B0-8994-1025-0AAD-03322A31937E}</Project>
+      <Project>{476D251F-1077-CD70-5E6E-DCB1D9013A3E}</Project>
       <Name>TobiiXRG2OM</Name>
     </ProjectReference>
+    <ProjectReference Include="SteamVR_Input_Editor.csproj">
+      <Project>{47E6F274-1D3B-FD8E-EB0C-C2D5E138B423}</Project>
+      <Name>SteamVR_Input_Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="TobiiXRDevTools.csproj">
-      <Project>{C3DF624E-C918-BA90-7577-D4C78CD55F55}</Project>
+      <Project>{F42233A5-C7DF-9CB0-B3FC-0CBB95931519}</Project>
       <Name>TobiiXRDevTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Editor.csproj">
+      <Project>{9F1B0148-551D-0595-EFE9-CDEAA577A297}</Project>
+      <Name>SteamVR_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR.csproj">
+      <Project>{ACC4F4BB-1CEA-AB22-406F-188D2BA2A4C8}</Project>
+      <Name>SteamVR</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
+      <Project>{6605A67F-70B7-C417-4371-D8348536EB60}</Project>
+      <Name>SteamVR_Windows_EditorHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{51125D4D-3C35-B23E-694E-5BBC4E647103}</Project>
+      <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
