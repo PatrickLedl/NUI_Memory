@@ -19,7 +19,9 @@ public class RockController : MonoBehaviour
     bool buttonPressed;
     public GameObject gameController;
 
-   
+    public delegate void LevelPassed();
+    public static event LevelPassed levelPassed;
+
 
     // Start is called before the first frame update
 
@@ -30,7 +32,7 @@ public class RockController : MonoBehaviour
         waitingTime2 = 1.5f;
         waitingTime3 = 1.3f;
 
-        GameController.onButtonPress += changeBool;
+        GameController.startRockys += changeBool;
         
          
      }
@@ -58,25 +60,34 @@ public class RockController : MonoBehaviour
             time2 += Time.deltaTime;
             time3 += Time.deltaTime;
 
-            if (time1 > waitingTime1)
+            if (counter <= 10)
             {
-                Instantiate(prefabRock1);
+                if (time1 > waitingTime1)
+                {
+                    Instantiate(prefabRock1);
+                    counter++;
+                    time1 = -2;
+                }
 
-                time1 = -2;
+                if (time2 > waitingTime2)
+                {
+                    Instantiate(prefabRock2);
+                    counter++;
+                    time2 = -3;
+                }
+
+                if (time3 > waitingTime3)
+                {
+                    Instantiate(prefabRock3);
+                    counter++;
+                    time3 = -1.5f;
+                }
             }
+        }
 
-            if (time2 > waitingTime2)
-            {
-                Instantiate(prefabRock2);
-
-                time2 = -3;
-            }
-
-            if (time3 > waitingTime3)
-            {
-                Instantiate(prefabRock3);
-                time3 = -1.5f;
-            }
+        if (levelPassed != null)
+        {
+            levelPassed();
         }
     }
 }

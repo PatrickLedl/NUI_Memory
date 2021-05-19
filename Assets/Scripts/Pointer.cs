@@ -31,11 +31,5 @@ public class Pointer : MonoBehaviour
 
     }
 
-    private RaycastHit CreateRaycast(float length)
-    {
-        RaycastHit hit;
-
-        return hit;
-
-    }
+    
 }
