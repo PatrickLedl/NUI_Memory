@@ -7,6 +7,7 @@ public class RockController : MonoBehaviour
     public Transform prefabRock1;
     public Transform prefabRock2;
     public Transform prefabRock3;
+    public GameObject Rock1, Rock2, Rock3;
     public Transform spawnPosition;
     private IEnumerator coroutine;
     float counter;
@@ -16,8 +17,10 @@ public class RockController : MonoBehaviour
     float time1;
     float time2;
     float time3;
+    float levelUpTime;
     bool buttonPressed;
     public GameObject gameController;
+    bool rocksAvailable;
 
     public delegate void LevelPassed();
     public static event LevelPassed levelPassed;
@@ -31,6 +34,9 @@ public class RockController : MonoBehaviour
         waitingTime1 = 2f;
         waitingTime2 = 1.5f;
         waitingTime3 = 1.3f;
+        rocksAvailable = false;
+
+        levelUpTime = 0f;
 
         GameController.startRockys += changeBool;
         
@@ -53,7 +59,6 @@ public class RockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (buttonPressed == true)
         {
             time1 += Time.deltaTime;
@@ -82,12 +87,27 @@ public class RockController : MonoBehaviour
                     counter++;
                     time3 = -1.5f;
                 }
+
+                
+            }
+
+            if(counter == 10)
+            {
+                Debug.Log("Coutner ist  10");
+                levelUpTime += Time.deltaTime;
+                Debug.Log(levelUpTime);
+                buttonPressed = false;
+                if(levelUpTime > 2)
+                {
+                    Debug.Log("LevelUpTime läuft");
+                    if (levelPassed != null)
+                    {
+                        levelPassed();
+                    }
+                }
             }
         }
 
-        if (levelPassed != null)
-        {
-            levelPassed();
-        }
+        
     }
 }

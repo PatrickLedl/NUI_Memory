@@ -15,6 +15,8 @@ namespace Tobii.XR.Examples
         private Color _originalColor;
         private Color _targetColor;
 
+       
+
         //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
         {
@@ -22,6 +24,7 @@ namespace Tobii.XR.Examples
             if (hasFocus)
             {
                 _targetColor = HighlightColor;
+            
             }
             //If this object lost focus, fade the object's color to it's original color
             else
