@@ -39,10 +39,14 @@ public class RockController : MonoBehaviour
         levelUpTime = 0f;
 
         GameController.startRockys += changeBool;
-        
+        GameController.nextLevel += setCounterDown;
          
      }
 
+    void setCounterDown()
+    {
+        counter = 0;
+    }
 
     void changeBool()
     {
@@ -91,21 +95,15 @@ public class RockController : MonoBehaviour
                 
             }
 
-            if(counter == 10)
+            if (counter == 10)
             {
-                Debug.Log("Coutner ist  10");
-                levelUpTime += Time.deltaTime;
-                Debug.Log(levelUpTime);
-                buttonPressed = false;
-                if(levelUpTime > 2)
+                if(levelPassed != null)
                 {
-                    Debug.Log("LevelUpTime läuft");
-                    if (levelPassed != null)
-                    {
-                        levelPassed();
-                    }
+                    
+                    levelPassed();
                 }
             }
+
         }
 
         
